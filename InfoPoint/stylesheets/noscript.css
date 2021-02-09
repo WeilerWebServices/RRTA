@@ -1,0 +1,114 @@
+﻿html
+{
+	margin: 2px 0px 0px 2px;
+	display:block;
+}
+body
+{
+	margin: 0px 0px 0px 0px;
+}
+
+form
+{
+	margin: 0px 0px 0px 0px;
+	font: 12px;
+}
+
+.routeName
+{
+	margin: 5px 0px 0px 0px;
+	border-bottom-style:dashed;
+	border-bottom-width:1px;
+	border-bottom-color:#acacac;
+	
+	border-top-style:solid;
+	border-top-width:1px;
+	border-top-color:#000000;
+	max-width:450px;
+}
+
+.departure
+{
+	margin:0px 0px 0px 0px;
+	text-align:center;
+	width:100%;
+	max-width:450px;
+}
+
+h1
+{
+	font-size: 12px;
+	font-weight: normal;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font-weight: bold;
+}
+h3
+{
+	font-size: 11px;
+	color: #acacac;
+	width: auto;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+.on-time
+{
+	color: #008000;
+	font-style: italic;
+	font-weight: bold;
+}
+.late
+{
+	color: #D9BA00;
+	font-style: italic;
+	font-weight: bold;
+}
+.early
+{
+	color: #D91F00;
+	font-style: italic;
+	font-weight: bold;
+}
+
+
+#header
+{
+	font-size: 13px;
+	font-weight: bold;
+}
+.routeNameListEntry
+{
+	font-size: 12px;
+	height: 16px;
+	margin-right: 0%;
+	overflow: hidden;
+}
+
+
+#CopyrightLink
+{
+	float: left;
+	margin: 10px 5px 0px 0px;
+	font-size: 10px;
+	color: #888888;
+}
+
+.stopNameListEntry
+{
+	font-size: 12px;
+	width: 99%;
+	height: 16px;
+	margin-right: 0%;
+	overflow: hidden;
+}
+
+
+#olddata
+{
+	width: 100%;
+	height: auto;
+}
