@@ -1,0 +1,110 @@
+#############################               ####################################
+############################# 17 RRTA Stops ####################################
+#############################               ####################################
+################################################################################
+
+#								Inbound
+
+14th St. & Rt. 462
+RR1001
+
+18th St. at Weis Market
+RR1050
+3rd & Linden at shelter
+RR1044
+
+3rd & Walnut St.
+RR1046
+
+3rd. & Chestnut St.
+RR1045
+
+3rd. & Poplar St.
+RR1019
+
+4th & Cherry St.
+RR1009
+
+4th & Mill St. at shelter
+RR1007
+
+4th & Union St. at shelter
+RR1008
+
+Centerville & Industry Rd.
+RR1068
+
+Centerville Rd. across That Fish Place
+RR1067
+
+Columbia & Atkins Ave.
+RR927
+
+Columbia & Princeton Ave.
+RR934
+
+Columbia & Yale Ave.
+RR935
+
+Columbia Ave. & Abbyville Rd.
+RR930
+
+Columbia Ave. & Eisenhower Blvd.
+RR939
+
+Columbia Ave. & Pearl St.
+RR1091
+
+################################################################################
+
+#								Outbound
+14th St. & Rt. 462
+RR1001
+
+150 Donnerville Rd.
+RR953
+
+1755 Columbia Ave. at McDonalds
+RR936
+
+18th & Manor St.
+RR996
+
+18th & Rt. 462 across from Weis Mkt.
+RR995
+
+2801 Columbia Ave.
+RR961
+
+2833 Columbia Ave. Villa Nova
+RR962
+
+2929 Old Tree Dr.
+RR944
+
+2930 Old Tree Dr.
+RR945
+
+3496 Rt. 462 across from Leisure Lanes
+RR969
+
+3515 Rt. 462 at Edwards
+RR970
+
+3955 Rt. 462 across from St. Anne's
+RR987
+
+3rd St. & Rt. 30 at Burger King
+RR1022
+
+3rd. & Poplar St.
+RR1019
+
+4031 Rt. 462
+RR990
+
+4th & Cherry St.
+RR1009
+
+4th & Mill St. at shelter
+RR1007

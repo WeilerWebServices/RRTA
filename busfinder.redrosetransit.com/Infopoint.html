@@ -1,0 +1,410 @@
+<!doctype html>
+<html dir="ltr" lang="en" class="no-js">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>InfoPoint</title>
+    <link href="InfoPoint/Content/desktop/Reset.css" rel="stylesheet" media="screen" />
+    <link href="InfoPoint/Content/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <link href="InfoPoint/Content/desktop/Layout.min.css" rel="stylesheet" type="text/css" />
+    <link href="InfoPoint/Scripts/kendoui/styles/kendo.common.min.css" rel="stylesheet" type="text/css" />
+    <link href="InfoPoint/Scripts/kendoui/styles/kendo.default.min.css" rel="stylesheet" type="text/css" />
+    <link href="InfoPoint/Scripts/qtip/jquery.qtip.min.css" rel="stylesheet" type="text/css" />
+    <link href="InfoPoint/Scripts/afarkas/styles.mod.css" rel="stylesheet" type="text/css" />
+    
+        <link href="InfoPoint/Content/desktop/Site.css" rel="stylesheet" type="text/css" />
+    <link href="InfoPoint/Content/desktop/Kendo.css" rel="stylesheet" type="text/css" />
+    <link href="InfoPoint/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="InfoPoint/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <!-- give life to HTML5 objects in IE -->
+    <!--[if lte IE 8]><script src="/InfoPoint/Scripts/html5.js" type="text/javascript"></script><![endif]-->
+    <!-- js HTML class -->
+    <script>        (function (H) { H.className = H.className.replace(/\bno-js\b/, 'js') })(document.documentElement)</script>
+</head>
+<body>
+    
+
+<div id="wrap" class="">
+
+    <header id="header" role="header">
+<a href="http://www.redrosetransit.com/" target="_blank"><img src="InfoPoint/Content/images/logo.png" alt="Red Rose Transit" class="logo" />
+<a href="InfoPoint/Minimal.html" class="text-only">Text Only Version</a>
+<div id="status_wrapper">
+<ul class="anonymous">
+    <li><a href="Infopoint.html#" class="login">Login</a></li>
+</ul>
+</div>
+
+    </header>
+
+    <nav id="nav" role="navigation">
+<a href="Infopoint.html#" class="fullscreen-icon nav-item">Full Screen</a>
+<a href="Infopoint.html#" class="feedback-icon nav-item">Feedback</a>
+<a href="Infopoint.html#" class="links-icon nav-item">Links</a>
+<a href="Infopoint.html#" class="clear-icon nav-item">Clear</a>
+<a href="Infopoint.html#" class="layers-icon nav-item">Layers</a>
+    </nav>
+
+    <section id="sidebar">
+    	<div class="inner-content">
+<ul id="overview_panelbar">
+	<li>
+		Routes
+<div id="routes_grid_wrapper">
+	<div class="search-container">
+		<button type="button" class="clear-x"></button>
+		<input type="text" />
+		<input type="submit" value="" />
+	</div>
+	<div id="routes_grid"></div>
+</div>
+		
+	</li>
+    <li>
+        Stops
+<div id="stops_grid_wrapper">
+	<div class="filter-container selected-routes">
+		<div class="filter-msg"> 
+            <span class="filter-header">Stops for:</span> 
+            <span class="filter-status">None</span>
+        </div>
+		<div class="filter-clear">Clear</div>
+	</div>
+	<div class="filter-container selected-filters">
+		<div class="filter-msg">Filter: <span class="filter-status">None</span></div>
+		<div class="filter-clear">Clear</div>
+	</div>
+	<div class="search-container filterable">
+		<button type="button" class="clear-x"></button>
+		<input type="text" />
+		<button type="button" class="filter-options"></button>
+		<input type="submit" value="" />
+	</div>
+	<div id="stops_grid"></div>
+</div>
+    </li>
+    <li>
+        Trip Planner
+<div id="trip_planner_wrapper">
+    <form id="trip_planner_form" action="Infopoint.html#" method="get" target="_blank">
+        <fieldset class="kendo-form">
+            <input type="hidden" name="f" value="d" />
+            <input type="hidden" name="hl" value="en" />
+            <table class="form-section">
+                <tr>
+                    <td>
+                        <label for="planner_from">From:</label>
+                    </td>
+                    <td>
+                        <input id="planner_from" type="text" name="saddr" class="required input-text" 
+                             minlength="2" placeholder="Address, intersection..." />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="planner_to">To:</label>
+                    </td>
+                    <td>
+                        <input id="planner_to" type="text" name="daddr" class="required input-text" 
+                             minlength="2" placeholder="Address, intersection..." />
+                    </td>
+                </tr>
+                <tr class="planner-when">
+                    <td>
+                        <label for="planner_when_type">When:</label>
+                    </td>
+                    <td class="bi">
+                        <div class="col">
+                            <select id="planner_when_type" name="ttype">
+                                <option value="dep" selected="selected">Depart</option>
+                                <option value="arr">Arrive</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <input id="planner_when_time" type="time" name="time" placeholder="Select time" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input id="planner_when_date" type="date" name="date" placeholder="Select time" />
+                    </td>
+                </tr>
+                    <tr>
+                        <td colspan="2" class="line"><hr /></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="planner_show">Show me:</label>
+                        </td>
+                        <td>
+                            <select id="planner_show" name="sort">
+                                <option value="def" selected="selected">The Quickest Trip</option>
+                                <option value="num">Fewer transfers</option>
+                                <option value="walk">Less walking</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="planner_travel">Travel by:</label>
+                        </td>
+                        <td>
+                            <select id="planner_travel" name="dirflg">
+                                <option value="r" selected="selected">Any transit mode</option>
+                                <option value="rB">Bus</option>
+                                <option value="rS">Subway</option>
+                                <option value="rT">Train</option>
+                                <option value="rR">Tram / Light rail</option>
+                            </select>
+                        </td>
+                    </tr>
+                <tr class="submit-row">
+                    <td></td>
+                    <td>
+                        <input type="submit" name="transitsubmit" value="Plan Trip" class="plan-trip" data-theme="b" />
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</div>
+    </li>
+	<li>
+		Set Alert
+<div id="set_alert_wrapper">
+    <form id="set_alert_form" method="get" action="Infopoint.html">
+        <fieldset class="kendo-form">
+            <table class="form-section">
+                <tr>
+                    <td>
+                        <label for="alert_route">Route:</label>
+                    </td>
+                    <td>
+                        <select id="alert_route" name="route" class="required" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="alert_direction">Direction:</label>
+                    </td>
+                    <td>
+                        <select id="alert_direction" name="direction" class="required" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="alert_stop">Stop:</label>
+                    </td>
+                    <td>
+                        <select id="alert_stop" name="stop" class="required" />
+                    </td>
+                </tr>
+                <tr class="depart-times">
+                    <td>
+                        <label for="alert_depart_from">Departures<br/>between:</label>
+                    </td>
+                    <td class="bi">
+                        <div class="col">
+                            <input id="alert_depart_from" name="departfrom" type="time" />
+                        </div>
+                        <div class="col">
+                            <input id="alert_depart_to" name="departto" type="time" />
+                        </div>
+                    </td>
+                </tr>
+                <tr class="notify-before">
+                    <td colspan="2" class="tri">
+                        <div class="col">
+                            <input id="alert_notify_before" type="radio" name="notifyme" checked="checked" />
+                            <label for="alert_notify_before">Notify me:</label>
+                        </div>
+                        <div class="col">
+                            <input id="alert_notify_before_mins" name="notifybeforemins" type="number" pattern="[0-9]*" />
+                        </div>
+                        <div class="col">
+                            <span>mins before<br />bus departs</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="authenticated notify-during"  style="display: none;" >
+                    <td colspan="2" class="tri">
+                        <div class="col">
+                            <input id="alert_notify_during" type="radio" name="notifyme" />
+                            <label for="alert_notify_during">Notify me<br />every:</label>
+                        </div>
+                        <div class="col">
+                            <input id="alert_notify_during_mins" name="notifyduringmins" type="number" pattern="[0-9]*" />
+                        </div>
+                        <div class="col">
+                            <span>mins during<br />this interval</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="authenticated"  style="display: none;" >
+                    <td colspan="2">
+                        <label class="notify-by">Notify me by:</label>
+                        <div class="notify-by-email">
+                            <input id="alert_notify_email" type="checkbox" name="notifyemail" />
+                            <label for="alert_notify_email">Email</label>
+                        </div>
+                        <div class="notify-by-sms" >
+                            <input id="alert_notify_sms" type="checkbox" name="notifysms" />
+                            <label for="alert_notify_sms">Text Message</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="anonymous" >
+                    <td>
+                        <label for="alert_email">Email:</label>
+                    </td>
+                    <td>
+                        <input type="email" name="email" id="alert_email" class="email input-text required" />
+                    </td>
+                </tr>
+                <tr class="submit-row">
+                    <td colspan="2">
+                        <div class="submit-container">
+                            <input type="submit" name="submit" value="Set Alert" class="set-alert" data-theme="b" />
+                            <div class="clear"></div>
+                            <a href="Infopoint.html#" class="info-helper">what is this?</a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</div>
+	</li>
+	<li>
+		Public Service Messages 
+        <span id="message_count_container"><span id="message_count">0</span></span>
+<div id="messages_list_wrapper">
+	<div id="message_filter_panel" class="alt-row">
+		<a href="Infopoint.html#" id="messages_all_button" class="selected">All Messages</a>
+		<a href="Infopoint.html#" id="messages_selected_button">Selected Routes</a>
+		<a href="Infopoint.html#" id="messages_myroutes_button" style="display: none;">My Routes</a>
+	</div>
+	<ul id="messages_list"></ul>
+	<div id="messages_none" style="padding: 3px; text-align: center;">No Public Service Messages</div>
+    <div id="log"></div>
+</div>
+
+<script type="text/x-kendo-tmpl" id="message_template">
+    <li class="message-row row">
+        <div style="position: relative;">
+            # if (Priority == 0) { #
+            <div id="message_priority"></div>
+            # } #
+            <div class="message-content">
+                <p># if (Message.length > 40) { # #=Message.substring(0, 37)+'...' # #} else { # #= Message # # } #</p>
+                <div class="date-field">#= moment(FromDate).format('M-D-YYYY') # 
+                # if (moment(FromDate).format('M-D-YYYY') != moment(ToDate).format('M-D-YYYY')) { #
+                - #= moment(ToDate).format('M-D-YYYY') #
+                # } #
+                </div>
+            </div>
+        </div>
+    </li>
+</script>
+
+<script type="text/x-kendo-tmpl" id="message_tooltip_template">
+    <div class="message-tooltip">
+        <div class="date-field">#= moment(FromDate).format('M-D-YYYY') # 
+        # if (moment(FromDate).format('M-D-YYYY') != moment(ToDate).format('M-D-YYYY')) { #
+        - #= moment(ToDate).format('M-D-YYYY') # # } #<br/>
+         #= moment(FromTime).format('h:mm A') # - #= moment(ToTime).format('h:mm A') #</div>
+
+            # if (Priority == 0) { #
+            <div id="message_priority_tooltip" style="margin: 2px;"></div>
+            # } #
+        <div style="margin-top: 5px;">${Message}</div>
+    </div>
+</script>
+	</li>
+</ul>
+    	</div>
+    </section>
+
+    <section role="main" id="content">
+    	<div class="inner-content">
+    		
+<div id="full_screen_header"></div>
+<div id="map_canvas"></div>
+    	</div>
+    </section>
+
+    <footer id="footer">
+<div class="copyright">Copyright 2012 Avail Technologies, Inc.</div>
+
+<div class="server-time"></div>
+    </footer>
+
+</div>
+
+<!-- USED FOR ADDING MODAL WINDOW CONTENT -->
+<div id="window"></div>
+    <!-- START JS PLUGINS -->
+        <script src="InfoPoint/Scripts/kendoui/js/jquery.min.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/underscore/underscore-min.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/kendoui/js/kendo.web.min.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/css_browser_selector.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/blockui/jquery.blockUI.min.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/momentjs/moment.min.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/qtip/jquery.qtip.min.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/jquerybbq/jquery.ba-bbq.min.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/placeholder/html5placeholder.jquery.mod.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/jquery.validate.min.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/jquery.validate.unobtrusive.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/jquery.unobtrusive-ajax.min.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/afarkas/jquery.ui.widget.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/afarkas/jquery.usermode.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/afarkas/ui.checkbox.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/qrcode/jquery.qrcode.min.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/jqueryform/jquery.form.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/jqueryautotab/jquery.autotab.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/notifier/notifier.mod.js" type="text/javascript"> </script>
+    <!-- new google api url with key from config -->
+
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.30&amp;key=AIzaSyDSU2yQzhQpWQZtkdWubNdhwZ7h13uf7OQ"></script>
+
+    <script src="InfoPoint/Scripts/gmap3/gmap3.min.js" type="text/javascript"></script>
+    <script src="InfoPoint/Scripts/geoxml/geoxml3poly.min.js" type="text/javascript"></script>
+    <!-- END JS PLUGINS -->
+    <!-- START MYAVAIL JS NAMESPACE -->
+        <script src="InfoPoint/Scripts/myavail/MyAvail.js" type="text/javascript"> </script>
+    <script type="text/javascript">
+        //POPULATE MYAVAIL PROPERTIES FROM SERVER SIDE WHEN NECESSARY
+	    MyAvail.baseUrl = '/InfoPoint/';
+	    MyAvail.transitAuthorityConfig = {"BaseUrl":null,"KmlUrl":"Resources/KML/","ImageUrl":"Resources/Images/","VehicleRefreshInterval":10,"StartLatitude":"40.0397","StartLongitude":"-76.3044","StartZoom":"13","BitlyUsername":"myavail","BitlyApiKey":"R_85cbf2c198a3d7e0eacbf91296856f9a","AnalyticsCode":"UA-72581275-2","EnableSsl":false,"SslDomain":"","EnableTripPlanning":true,"EnableSms":true};
+        MyAvail.fullyQualifiedApplicationPath = 'http://busfinder.redrosetransit.com/InfoPoint/';
+    </script>
+        <script src="InfoPoint/Scripts/myavail/MyAvail.Map.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/myavail/MyAvail.Form.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/myavail/MyAvail.Tooltip.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/myavail/desktop/MyAvail.Desktop.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/myavail/desktop/MyAvail.Account.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/myavail/desktop/MyAvail.History.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/myavail/desktop/MyAvail.Analytics.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/myavail/desktop/MyAvail.Route.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/myavail/desktop/MyAvail.Stop.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/myavail/desktop/MyAvail.Vehicle.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/myavail/desktop/MyAvail.Message.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/myavail/desktop/MyAvail.Trip.js" type="text/javascript"> </script>
+        <script src="InfoPoint/Scripts/myavail/desktop/MyAvail.Alert.js" type="text/javascript"> </script>
+    <!-- END MYAVAIL JS NAMESPACE -->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', MyAvail.transitAuthorityConfig.AnalyticsCode]);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</body>
+</html>

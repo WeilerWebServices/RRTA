@@ -1,0 +1,15 @@
+# Embed Lancaster County, PA iframe Maps
+
+# Small
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d283700.4213186508!2d-76.17469421820154!3d40.0086499163511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c61f5016e7129d%3A0x851a1ff93d479dd6!2sLancaster%20County%2C%20PA!5e1!3m2!1sen!2sus!4v1611306590856!5m2!1sen!2sus" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+# Medium
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d283700.4213186508!2d-76.17469421820154!3d40.0086499163511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c61f5016e7129d%3A0x851a1ff93d479dd6!2sLancaster%20County%2C%20PA!5e1!3m2!1sen!2sus!4v1611306590856!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+# Large
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d283700.4213186508!2d-76.17469421820154!3d40.0086499163511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c61f5016e7129d%3A0x851a1ff93d479dd6!2sLancaster%20County%2C%20PA!5e1!3m2!1sen!2sus!4v1611306590856!5m2!1sen!2sus" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+# Custom size 800 x 600
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d283700.4213186508!2d-76.17469421820154!3d40.0086499163511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c61f5016e7129d%3A0x851a1ff93d479dd6!2sLancaster%20County%2C%20PA!5e1!3m2!1sen!2sus!4v1611306590856!5m2!1sen!2sus" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>

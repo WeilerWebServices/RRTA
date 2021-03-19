@@ -1,0 +1,111 @@
+#############################               ####################################
+############################# 18 RRTA Stops ####################################
+#############################               ####################################
+################################################################################
+
+#								Inbound
+230 W. Main St.
+RR1192
+
+2544 Marietta Ave.
+RR1216
+
+330 E Main St. at shelter
+RR1194
+
+334 Main across from Turkey Hill
+RR1191
+
+740 E Main St.
+RR1196
+
+890 E. Main St.
+RR1197
+
+960 E. Main St.
+RR1198
+
+964 Main St.
+RR1190
+
+AMTRAK ETown
+RR1615
+
+Bainbridge & Market St.
+RR1184
+
+Bainbridge St. & Masonic Dr.
+RR1182
+
+Bainbridge St. at Mars Dove factory
+RR1183
+
+Church & Bank St.
+RR1207
+
+Church & Main St.
+RR1206
+
+Corporate Blvd. & Stony Battery Rd.
+RR1665
+
+E. Main & Barbara St.
+RR1157
+
+E. Main & Esbenshade Rd. across Sheetz
+RR1201
+
+################################################################################
+
+#								Outbound
+
+1255 S. Market St.
+RR1172
+
+1387 Rt. 230 at Eby Chiques Rd.
+RR1152
+
+1433 Marietta Pk.
+RR1111
+
+2011 Marietta Pk.
+RR1118
+
+2115 Marietta Pk.
+RR1119
+
+2435 Marietta Pk.
+RR1122
+
+3019 Marietta Ave.
+RR1131
+
+3045 Marietta Ave. Oyster Pt. Medical
+RR1132
+
+955 W. Main St.
+RR1168
+
+Church St. & Camp Meeting Rd.
+RR1142
+
+Collage Ave. & Walnut St.
+RR1104
+
+E. Main & Barbara St.
+RR1157
+
+E. Main & Jacob St.
+RR1156
+
+E. Main & Lefever
+RR1154
+
+E. Main & Market St.
+RR1161
+
+E. Main & Necomer St.
+RR1153
+
+E. Main St. & Joy Ave.
+RR1155
